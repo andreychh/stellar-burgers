@@ -66,17 +66,29 @@ export const BurgerConstructorUI: FC<BurgerConstructorUIProps> = ({
         <p className={`text ${styles.text} mr-2`}>{price}</p>
         <CurrencyIcon type='primary' />
       </div>
-      <Button htmlType='button' type='primary' size='large' children='Оформить заказ' onClick={onOrderClick} />
+      <Button
+        htmlType='button'
+        type='primary'
+        size='large'
+        children='Оформить заказ'
+        onClick={onOrderClick}
+      />
     </div>
 
     {orderRequest && (
-      <Modal onClose={closeOrderModal} title={'Оформляем заказ...'}>
+      <Modal
+        onClose={closeOrderModal}
+        title={'Оформляем заказ...'}
+      >
         <Preloader />
       </Modal>
     )}
 
     {orderModalData && (
-      <Modal onClose={closeOrderModal} title={orderRequest ? 'Оформляем заказ...' : ''}>
+      <Modal
+        onClose={closeOrderModal}
+        title={orderRequest ? 'Оформляем заказ...' : ''}
+      >
         <OrderDetailsUI orderNumber={orderModalData.number} />
       </Modal>
     )}

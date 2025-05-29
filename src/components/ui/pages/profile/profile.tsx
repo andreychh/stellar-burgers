@@ -19,7 +19,10 @@ export const ProfileUI: FC<ProfileUIProps> = ({
     <div className={`mt-30 mr-15 ${styles.menu}`}>
       <ProfileMenu />
     </div>
-    <form className={`mt-30 ${styles.form} ${commonStyles.form}`} onSubmit={handleSubmit}>
+    <form
+      className={`mt-30 ${styles.form} ${commonStyles.form}`}
+      onSubmit={handleSubmit}
+    >
       <>
         <div className='pb-6'>
           <Input
@@ -62,10 +65,19 @@ export const ProfileUI: FC<ProfileUIProps> = ({
         </div>
         {isFormChanged && (
           <div className={styles.button}>
-            <Button type='secondary' htmlType='button' size='medium' onClick={handleCancel}>
+            <Button
+              type='secondary'
+              htmlType='button'
+              size='medium'
+              onClick={handleCancel}
+            >
               Отменить
             </Button>
-            <Button type='primary' size='medium' htmlType='submit'>
+            <Button
+              type='primary'
+              size='medium'
+              htmlType='submit'
+            >
               Сохранить
             </Button>
           </div>

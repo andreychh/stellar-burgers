@@ -19,7 +19,11 @@ export const RegisterUI: FC<RegisterUIProps> = ({
   <main className={styles.container}>
     <div className={`pt-6 ${styles.wrapCenter}`}>
       <h3 className='pb-6 text text_type_main-medium'>Регистрация</h3>
-      <form className={`pb-15 ${styles.form}`} name='register' onSubmit={handleSubmit}>
+      <form
+        className={`pb-15 ${styles.form}`}
+        name='register'
+        onSubmit={handleSubmit}
+      >
         <>
           <div className='pb-6'>
             <Input
@@ -46,10 +50,18 @@ export const RegisterUI: FC<RegisterUIProps> = ({
             />
           </div>
           <div className='pb-6'>
-            <PasswordInput onChange={(e) => setPassword(e.target.value)} value={password} name='password' />
+            <PasswordInput
+              onChange={(e) => setPassword(e.target.value)}
+              value={password}
+              name='password'
+            />
           </div>
           <div className={`pb-6 ${styles.button}`}>
-            <Button type='primary' size='medium' htmlType='submit'>
+            <Button
+              type='primary'
+              size='medium'
+              htmlType='submit'
+            >
               Зарегистрироваться
             </Button>
           </div>
@@ -58,7 +70,10 @@ export const RegisterUI: FC<RegisterUIProps> = ({
       </form>
       <div className={`${styles.question} text text_type_main-default pb-6`}>
         Уже зарегистрированы?
-        <Link to='/login' className={`pl-2 ${styles.link}`}>
+        <Link
+          to='/login'
+          className={`pl-2 ${styles.link}`}
+        >
           Войти
         </Link>
       </div>

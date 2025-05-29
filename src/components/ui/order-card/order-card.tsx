@@ -30,7 +30,11 @@ export const OrderCardUI: FC<OrderCardUIProps> = memo(({ orderInfo, maxIngredien
           let zIndex = maxIngredients - index;
           let right = 20 * index;
           return (
-            <li className={styles.img_wrap} style={{ zIndex: zIndex, right: right }} key={index}>
+            <li
+              className={styles.img_wrap}
+              style={{ zIndex: zIndex, right: right }}
+              key={index}
+            >
               <img
                 style={{
                   opacity: orderInfo.remains && maxIngredients === index + 1 ? '0.5' : '1',
