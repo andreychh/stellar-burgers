@@ -41,9 +41,9 @@ export const RegisterUI: FC<RegisterUIProps> = ({
             <Input
               error={false}
               errorText=''
-              name={'email'}
+              name='email'
               placeholder='E-mail'
-              size={'default'}
+              size='default'
               type='email'
               value={email}
               onChange={(e) => setEmail(e.target.value)}

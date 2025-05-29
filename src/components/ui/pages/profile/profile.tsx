@@ -27,12 +27,12 @@ export const ProfileUI: FC<ProfileUIProps> = ({
         <div className='pb-6'>
           <Input
             error={false}
-            errorText={''}
-            icon={'EditIcon'}
-            name={'name'}
-            placeholder={'Имя'}
-            size={'default'}
-            type={'text'}
+            errorText=''
+            icon='EditIcon'
+            name='name'
+            placeholder='Имя'
+            size='default'
+            type='text'
             value={formValue.name}
             onChange={handleInputChange}
           />
@@ -40,12 +40,12 @@ export const ProfileUI: FC<ProfileUIProps> = ({
         <div className='pb-6'>
           <Input
             error={false}
-            errorText={''}
-            icon={'EditIcon'}
-            name={'email'}
-            placeholder={'E-mail'}
-            size={'default'}
-            type={'email'}
+            errorText=''
+            icon='EditIcon'
+            name='email'
+            placeholder='E-mail'
+            size='default'
+            type='email'
             value={formValue.email}
             onChange={handleInputChange}
           />
@@ -53,12 +53,12 @@ export const ProfileUI: FC<ProfileUIProps> = ({
         <div className='pb-6'>
           <Input
             error={false}
-            errorText={''}
-            icon={'EditIcon'}
-            name={'password'}
-            placeholder={'Пароль'}
-            size={'default'}
-            type={'password'}
+            errorText=''
+            icon='EditIcon'
+            name='password'
+            placeholder='Пароль'
+            size='default'
+            type='password'
             value={formValue.password}
             onChange={handleInputChange}
           />

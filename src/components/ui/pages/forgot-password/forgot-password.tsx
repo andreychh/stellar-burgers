@@ -42,7 +42,7 @@ export const ForgotPasswordUI: FC<PageUIProps> = ({ errorText, email, setEmail, 
         Вспомнили пароль?
         <Link
           className={`pl-2 ${styles.link}`}
-          to={'/login'}
+          to='/login'
         >
           Войти
         </Link>

@@ -9,7 +9,7 @@ export const ProfileMenuUI: FC<ProfileMenuUIProps> = ({ pathname, handleLogout }
   <>
     <NavLink
       end
-      to={'/profile'}
+      to='/profile'
       className={({ isActive }) =>
         `text text_type_main-medium text_color_inactive pt-4 pb-4 ${styles.link} ${isActive ? styles.link_active : ''}`
       }
@@ -17,7 +17,7 @@ export const ProfileMenuUI: FC<ProfileMenuUIProps> = ({ pathname, handleLogout }
       Профиль
     </NavLink>
     <NavLink
-      to={'/profile/orders'}
+      to='/profile/orders'
       className={({ isActive }) =>
         `text text_type_main-medium text_color_inactive pt-4 pb-4 ${styles.link} ${isActive ? styles.link_active : ''}`
       }

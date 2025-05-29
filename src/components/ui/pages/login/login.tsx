@@ -60,7 +60,7 @@ export const LoginUI: FC<LoginUIProps> = ({ email, setEmail, errorText, handleSu
         Забыли пароль?
         <Link
           className={`pl-2 ${styles.link}`}
-          to={'/forgot-password'}
+          to='/forgot-password'
         >
           Восстановить пароль
         </Link>

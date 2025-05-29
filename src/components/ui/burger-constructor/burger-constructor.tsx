@@ -77,7 +77,7 @@ export const BurgerConstructorUI: FC<BurgerConstructorUIProps> = ({
 
     {orderRequest && (
       <Modal
-        title={'Оформляем заказ...'}
+        title='Оформляем заказ...'
         onClose={closeOrderModal}
       >
         <Preloader />

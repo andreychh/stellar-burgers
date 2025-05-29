@@ -49,7 +49,8 @@
     "react/jsx-max-props-per-line": [
       "warn",
       {
-        "maximum": 7
+        "maximum": 1,
+        "when": "multiline"
       }
     ],
     "react/jsx-max-depth": [
@@ -131,9 +132,24 @@
         "shorthandFirst": true,
         "ignoreCase": true,
         "noSortAlphabetically": false,
-        "reservedFirst": ["key", "ref", "dangerouslySetInnerHTML"],
+        "reservedFirst": [
+          "key",
+          "ref",
+          "dangerouslySetInnerHTML"
+        ],
         "multiline": "last"
       }
+    ],
+    "react/jsx-curly-brace-presence": [
+      "warn",
+      {
+        "props": "never",
+        "children": "never"
+      }
+    ],
+    "react/jsx-closing-bracket-location": [
+      "warn",
+      "line-aligned"
     ]
   },
   "settings": {
