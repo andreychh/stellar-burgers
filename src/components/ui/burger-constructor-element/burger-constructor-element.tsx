@@ -1,8 +1,7 @@
 import styles from './burger-constructor-element.module.css';
 
 import React, { FC, memo } from 'react';
-import { ConstructorElement } from '@zlden/react-developer-burger-ui-components';
-import { MoveButton } from '@zlden/react-developer-burger-ui-components';
+import { ConstructorElement, MoveButton } from '@zlden/react-developer-burger-ui-components';
 
 import { BurgerConstructorElementUIProps } from './type';
 

@@ -91,6 +91,9 @@
       }
     ],
     "import/order": "off",
+    "import/newline-after-import": "warn",
+    "import/no-named-default": "off",
+    "import/no-duplicates": "warn",
     "simple-import-sort/imports": [
       "warn",
       {
@@ -120,9 +123,7 @@
           ]
         ]
       }
-    ],
-    "import/newline-after-import": "warn",
-    "import/no-named-default": "off"
+    ]
   },
   "settings": {
     "react": {

@@ -2,8 +2,7 @@ import styles from './constructor-page.module.css';
 
 import { FC } from 'react';
 
-import { BurgerIngredients } from '../../components';
-import { BurgerConstructor } from '../../components';
+import { BurgerConstructor, BurgerIngredients } from '../../components';
 import { Preloader } from '../../components/ui';
 import { useSelector } from '../../services/store';
 
