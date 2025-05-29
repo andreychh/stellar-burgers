@@ -32,6 +32,7 @@
         "enforceForSwitchCase": true
       }
     ],
+    "import/no-namespace": "error",
     "react/void-dom-elements-no-children": "warn",
     "react/no-unsafe": "warn",
     "react/no-unused-state": "warn",

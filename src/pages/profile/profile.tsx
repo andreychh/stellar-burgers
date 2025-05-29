@@ -1,4 +1,4 @@
-import { FC, SyntheticEvent, useEffect, useState } from 'react';
+import { ChangeEvent, FC, SyntheticEvent, useEffect, useState } from 'react';
 import { ProfileUI } from '@ui-pages';
 
 export const Profile: FC = () => {
@@ -37,7 +37,7 @@ export const Profile: FC = () => {
     });
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     setFormValue((prevState) => ({
       ...prevState,
       [e.target.name]: e.target.value,
