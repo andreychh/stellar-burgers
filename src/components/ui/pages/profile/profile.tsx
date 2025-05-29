@@ -1,11 +1,11 @@
-import { FC } from 'react';
-
-import { Button, Input } from '@zlden/react-developer-burger-ui-components';
-import styles from './profile.module.css';
 import commonStyles from '../common.module.css';
+import styles from './profile.module.css';
+
+import { FC } from 'react';
+import { ProfileMenu } from '@components';
+import { Button, Input } from '@zlden/react-developer-burger-ui-components';
 
 import { ProfileUIProps } from './type';
-import { ProfileMenu } from '@components';
 
 export const ProfileUI: FC<ProfileUIProps> = ({
   formValue,

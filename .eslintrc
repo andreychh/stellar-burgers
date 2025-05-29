@@ -1,7 +1,15 @@
 {
   "parser": "@typescript-eslint/parser",
-  "plugins": ["react", "@typescript-eslint", "prettier"],
-  "extends": ["prettier"],
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "prettier",
+    "import",
+    "simple-import-sort"
+  ],
+  "extends": [
+    "prettier"
+  ],
   "parserOptions": {
     "ecmaVersion": 2018,
     "sourceType": "module",
@@ -18,7 +26,12 @@
     ],
     "react/react-in-jsx-scope": "off",
     "comma-dangle": "off",
-    "use-isnan": ["error", { "enforceForSwitchCase": true }],
+    "use-isnan": [
+      "error",
+      {
+        "enforceForSwitchCase": true
+      }
+    ],
     "react/void-dom-elements-no-children": "warn",
     "react/no-unsafe": "warn",
     "react/no-unused-state": "warn",
@@ -28,13 +41,32 @@
     "react/no-this-in-sfc": "warn",
     "react/no-string-refs": "warn",
     "react/no-redundant-should-component-update": "warn",
-    "react/jsx-boolean-value": ["warn", "never"],
+    "react/jsx-boolean-value": [
+      "warn",
+      "never"
+    ],
     "react/jsx-key": "warn",
-    "react/jsx-max-props-per-line": ["warn", { "maximum": 7 }],
-    "react/jsx-max-depth": ["warn", { "max": 8 }],
-    "arrow-body-style": ["warn", "as-needed"],
+    "react/jsx-max-props-per-line": [
+      "warn",
+      {
+        "maximum": 7
+      }
+    ],
+    "react/jsx-max-depth": [
+      "warn",
+      {
+        "max": 8
+      }
+    ],
+    "arrow-body-style": [
+      "warn",
+      "as-needed"
+    ],
     "dot-notation": "warn",
-    "jsx-quotes": ["warn", "prefer-single"],
+    "jsx-quotes": [
+      "warn",
+      "prefer-single"
+    ],
     "valid-typeof": "warn",
     "@typescript-eslint/member-ordering": [
       "warn",
@@ -57,11 +89,54 @@
           "public-instance-method"
         ]
       }
-    ]
+    ],
+    "import/order": "off",
+    "simple-import-sort/imports": [
+      "warn",
+      {
+        "groups": [
+          // CSS-модули
+          [
+            "^.+\\.css$"
+          ],
+          // Пустая строка после CSS
+          [
+            "^\\u0000"
+          ],
+          // Внешние библиотеки (React, Redux и другие)
+          [
+            "^react",
+            "^redux",
+            "^@",
+            "^[a-zA-Z]"
+          ],
+          // Абсолютные импорты проекта (все папки сразу)
+          [
+            "^(components|containers|pages|store|services|api|utils|hooks|constants|types)(/.*|$)"
+          ],
+          // Относительные импорты
+          [
+            "^\\."
+          ]
+        ]
+      }
+    ],
+    "import/newline-after-import": "warn",
+    "import/no-named-default": "off"
   },
   "settings": {
     "react": {
       "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
     }
   }
 }

@@ -1,5 +1,5 @@
-import { ProfileUI } from '@ui-pages';
 import { FC, SyntheticEvent, useEffect, useState } from 'react';
+import { ProfileUI } from '@ui-pages';
 
 export const Profile: FC = () => {
   /** TODO: взять переменную из стора */

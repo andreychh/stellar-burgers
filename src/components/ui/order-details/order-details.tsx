@@ -1,5 +1,7 @@
-import React from 'react';
 import styles from './order-details.module.css';
+
+import React from 'react';
+
 import doneImg from '../../../images/done.svg';
 import { OrderDetailsUIProps } from './type';
 

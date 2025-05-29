@@ -1,5 +1,7 @@
-import React, { FC, memo } from 'react';
 import styles from './ingredient-details.module.css';
+
+import React, { FC, memo } from 'react';
+
 import { IngredientDetailsUIProps } from './type';
 
 export const IngredientDetailsUI: FC<IngredientDetailsUIProps> = memo(({ ingredientData }) => {

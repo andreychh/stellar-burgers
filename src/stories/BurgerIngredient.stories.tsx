@@ -1,6 +1,6 @@
 import React from 'react';
-import { BurgerIngredientUI } from '@ui';
 import type { Meta, StoryObj } from '@storybook/react';
+import { BurgerIngredientUI } from '@ui';
 
 const meta = {
   title: 'Example/BurgerIngredient',

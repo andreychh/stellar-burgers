@@ -1,5 +1,6 @@
-import React from 'react';
 import styles from './preloader.module.css';
+
+import React from 'react';
 
 export const Preloader = () => (
   <div className={styles.preloader}>

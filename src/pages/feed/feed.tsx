@@ -1,7 +1,7 @@
+import { FC } from 'react';
 import { Preloader } from '@ui';
 import { FeedUI } from '@ui-pages';
 import { TOrder } from '@utils-types';
-import { FC } from 'react';
 
 export const Feed: FC = () => {
   /** TODO: взять переменную из стора */
