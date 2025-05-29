@@ -47,10 +47,10 @@ export const Profile: FC = () => {
   return (
     <ProfileUI
       formValue={formValue}
-      isFormChanged={isFormChanged}
       handleCancel={handleCancel}
-      handleSubmit={handleSubmit}
       handleInputChange={handleInputChange}
+      handleSubmit={handleSubmit}
+      isFormChanged={isFormChanged}
     />
   );
 

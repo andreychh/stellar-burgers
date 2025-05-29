@@ -43,9 +43,9 @@ export const OrderCard: FC<OrderCardProps> = memo(({ order }) => {
 
   return (
     <OrderCardUI
-      orderInfo={orderInfo}
-      maxIngredients={maxIngredients}
       locationState={{ background: location }}
+      maxIngredients={maxIngredients}
+      orderInfo={orderInfo}
     />
   );
 });

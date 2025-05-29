@@ -31,12 +31,12 @@ export const BurgerConstructor: FC = () => {
 
   return (
     <BurgerConstructorUI
-      price={price}
-      orderRequest={orderRequest}
+      closeOrderModal={closeOrderModal}
       constructorItems={constructorItems}
       orderModalData={orderModalData}
+      orderRequest={orderRequest}
+      price={price}
       onOrderClick={onOrderClick}
-      closeOrderModal={closeOrderModal}
     />
   );
 };

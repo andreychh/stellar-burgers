@@ -27,40 +27,40 @@ export const RegisterUI: FC<RegisterUIProps> = ({
         <>
           <div className='pb-6'>
             <Input
-              type='text'
-              placeholder='Имя'
-              onChange={(e) => setUserName(e.target.value)}
-              value={userName}
-              name='name'
               error={false}
               errorText=''
+              name='name'
+              placeholder='Имя'
               size='default'
+              type='text'
+              value={userName}
+              onChange={(e) => setUserName(e.target.value)}
             />
           </div>
           <div className='pb-6'>
             <Input
-              type='email'
-              placeholder='E-mail'
-              onChange={(e) => setEmail(e.target.value)}
-              value={email}
-              name={'email'}
               error={false}
               errorText=''
+              name={'email'}
+              placeholder='E-mail'
               size={'default'}
+              type='email'
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div className='pb-6'>
             <PasswordInput
-              onChange={(e) => setPassword(e.target.value)}
-              value={password}
               name='password'
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
           </div>
           <div className={`pb-6 ${styles.button}`}>
             <Button
-              type='primary'
-              size='medium'
               htmlType='submit'
+              size='medium'
+              type='primary'
             >
               Зарегистрироваться
             </Button>
@@ -71,8 +71,8 @@ export const RegisterUI: FC<RegisterUIProps> = ({
       <div className={`${styles.question} text text_type_main-default pb-6`}>
         Уже зарегистрированы?
         <Link
-          to='/login'
           className={`pl-2 ${styles.link}`}
+          to='/login'
         >
           Войти
         </Link>

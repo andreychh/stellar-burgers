@@ -29,11 +29,11 @@ export const ResetPassword: FC = () => {
   return (
     <ResetPasswordUI
       errorText={error?.message}
+      handleSubmit={handleSubmit}
       password={password}
-      token={token}
       setPassword={setPassword}
       setToken={setToken}
-      handleSubmit={handleSubmit}
+      token={token}
     />
   );
 };

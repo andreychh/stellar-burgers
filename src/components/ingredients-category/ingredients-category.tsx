@@ -27,11 +27,11 @@ export const IngredientsCategory = forwardRef<HTMLUListElement, TIngredientsCate
 
     return (
       <IngredientsCategoryUI
-        title={title}
-        titleRef={titleRef}
+        ref={ref}
         ingredients={ingredients}
         ingredientsCounters={ingredientsCounters}
-        ref={ref}
+        title={title}
+        titleRef={titleRef}
       />
     );
   }

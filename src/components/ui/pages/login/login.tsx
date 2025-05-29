@@ -18,28 +18,28 @@ export const LoginUI: FC<LoginUIProps> = ({ email, setEmail, errorText, handleSu
         <>
           <div className='pb-6'>
             <Input
-              type='email'
-              placeholder='E-mail'
-              onChange={(e) => setEmail(e.target.value)}
-              value={email}
-              name='email'
               error={false}
               errorText=''
+              name='email'
+              placeholder='E-mail'
               size='default'
+              type='email'
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div className='pb-6'>
             <PasswordInput
-              onChange={(e) => setPassword(e.target.value)}
-              value={password}
               name='password'
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
           </div>
           <div className={`pb-6 ${styles.button}`}>
             <Button
-              type='primary'
-              size='medium'
               htmlType='submit'
+              size='medium'
+              type='primary'
             >
               Войти
             </Button>
@@ -50,8 +50,8 @@ export const LoginUI: FC<LoginUIProps> = ({ email, setEmail, errorText, handleSu
       <div className={`pb-4 ${styles.question} text text_type_main-default`}>
         Вы - новый пользователь?
         <Link
-          to='/register'
           className={`pl-2 ${styles.link}`}
+          to='/register'
         >
           Зарегистрироваться
         </Link>
@@ -59,8 +59,8 @@ export const LoginUI: FC<LoginUIProps> = ({ email, setEmail, errorText, handleSu
       <div className={`${styles.question} text text_type_main-default pb-6`}>
         Забыли пароль?
         <Link
-          to={'/forgot-password'}
           className={`pl-2 ${styles.link}`}
+          to={'/forgot-password'}
         >
           Восстановить пароль
         </Link>

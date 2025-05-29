@@ -20,9 +20,9 @@ export const FeedInfo: FC = () => {
 
   return (
     <FeedInfoUI
-      readyOrders={readyOrders}
-      pendingOrders={pendingOrders}
       feed={feed}
+      pendingOrders={pendingOrders}
+      readyOrders={readyOrders}
     />
   );
 };

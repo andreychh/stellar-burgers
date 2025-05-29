@@ -12,14 +12,14 @@ export const Register: FC = () => {
 
   return (
     <RegisterUI
-      errorText=''
       email={email}
-      userName={userName}
+      errorText=''
+      handleSubmit={handleSubmit}
       password={password}
       setEmail={setEmail}
       setPassword={setPassword}
       setUserName={setUserName}
-      handleSubmit={handleSubmit}
+      userName={userName}
     />
   );
 };

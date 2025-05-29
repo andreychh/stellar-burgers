@@ -9,10 +9,10 @@ import { OrderCardUIProps } from './type';
 
 export const OrderCardUI: FC<OrderCardUIProps> = memo(({ orderInfo, maxIngredients, locationState }) => (
   <Link
-    to={orderInfo.number.toString()}
+    className={`p-6 mb-4 mr-2 ${styles.order}`}
     relative='path'
     state={locationState}
-    className={`p-6 mb-4 mr-2 ${styles.order}`}
+    to={orderInfo.number.toString()}
   >
     <div className={styles.order_info}>
       <span className={`text text_type_digits-default ${styles.number}`}>
@@ -31,17 +31,17 @@ export const OrderCardUI: FC<OrderCardUIProps> = memo(({ orderInfo, maxIngredien
           let right = 20 * index;
           return (
             <li
+              key={index}
               className={styles.img_wrap}
               style={{ zIndex: zIndex, right: right }}
-              key={index}
             >
               <img
+                alt={ingredient.name}
+                className={styles.img}
+                src={ingredient.image_mobile}
                 style={{
                   opacity: orderInfo.remains && maxIngredients === index + 1 ? '0.5' : '1',
                 }}
-                className={styles.img}
-                src={ingredient.image_mobile}
-                alt={ingredient.name}
               />
               {maxIngredients === index + 1 ? (
                 <span className={`text text_type_digits-default ${styles.remains}`}>

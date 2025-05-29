@@ -48,16 +48,16 @@ export const BurgerIngredients: FC = () => {
 
   return (
     <BurgerIngredientsUI
-      currentTab={currentTab}
       buns={buns}
+      bunsRef={bunsRef}
+      currentTab={currentTab}
       mains={mains}
+      mainsRef={mainsRef}
       sauces={sauces}
+      saucesRef={saucesRef}
       titleBunRef={titleBunRef}
       titleMainRef={titleMainRef}
       titleSaucesRef={titleSaucesRef}
-      bunsRef={bunsRef}
-      mainsRef={mainsRef}
-      saucesRef={saucesRef}
       onTabClick={onTabClick}
     />
   );

@@ -11,12 +11,12 @@ export const Login: FC = () => {
 
   return (
     <LoginUI
-      errorText=''
       email={email}
-      setEmail={setEmail}
-      password={password}
-      setPassword={setPassword}
+      errorText=''
       handleSubmit={handleSubmit}
+      password={password}
+      setEmail={setEmail}
+      setPassword={setPassword}
     />
   );
 };

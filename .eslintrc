@@ -123,6 +123,17 @@
           ]
         ]
       }
+    ],
+    "react/jsx-sort-props": [
+      "warn",
+      {
+        "callbacksLast": true,
+        "shorthandFirst": true,
+        "ignoreCase": true,
+        "noSortAlphabetically": false,
+        "reservedFirst": ["key", "ref", "dangerouslySetInnerHTML"],
+        "multiline": "last"
+      }
     ]
   },
   "settings": {

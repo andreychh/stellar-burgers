@@ -8,11 +8,11 @@ import { ProfileMenuUIProps } from './type';
 export const ProfileMenuUI: FC<ProfileMenuUIProps> = ({ pathname, handleLogout }) => (
   <>
     <NavLink
+      end
       to={'/profile'}
       className={({ isActive }) =>
         `text text_type_main-medium text_color_inactive pt-4 pb-4 ${styles.link} ${isActive ? styles.link_active : ''}`
       }
-      end
     >
       Профиль
     </NavLink>

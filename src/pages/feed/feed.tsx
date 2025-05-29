@@ -12,7 +12,7 @@ export const Feed: FC = () => {
   }
 
   <FeedUI
-    orders={orders}
     handleGetFeeds={() => {}}
+    orders={orders}
   />;
 };

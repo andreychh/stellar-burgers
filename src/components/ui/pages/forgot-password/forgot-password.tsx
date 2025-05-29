@@ -17,21 +17,21 @@ export const ForgotPasswordUI: FC<PageUIProps> = ({ errorText, email, setEmail, 
       >
         <div className='pb-6'>
           <Input
-            type='email'
-            placeholder='Укажите e-mail'
-            onChange={(e) => setEmail(e.target.value)}
-            value={email}
-            name='email'
             error={false}
             errorText=''
+            name='email'
+            placeholder='Укажите e-mail'
             size='default'
+            type='email'
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
         </div>
         <div className={`pb-6 ${styles.button}`}>
           <Button
-            type='primary'
-            size='medium'
             htmlType='submit'
+            size='medium'
+            type='primary'
           >
             Восстановить
           </Button>
@@ -41,8 +41,8 @@ export const ForgotPasswordUI: FC<PageUIProps> = ({ errorText, email, setEmail, 
       <div className={`${styles.question} text text_type_main-default pb-6`}>
         Вспомнили пароль?
         <Link
-          to={'/login'}
           className={`pl-2 ${styles.link}`}
+          to={'/login'}
         >
           Войти
         </Link>
