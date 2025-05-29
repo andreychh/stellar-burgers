@@ -1,9 +1,5 @@
 import React, { FC } from 'react';
-import {
-  Button,
-  ConstructorElement,
-  CurrencyIcon
-} from '@zlden/react-developer-burger-ui-components';
+import { Button, ConstructorElement, CurrencyIcon } from '@zlden/react-developer-burger-ui-components';
 import styles from './burger-constructor.module.css';
 import { BurgerConstructorUIProps } from './type';
 import { TConstructorIngredient } from '@utils-types';
@@ -16,7 +12,7 @@ export const BurgerConstructorUI: FC<BurgerConstructorUIProps> = ({
   price,
   orderModalData,
   onOrderClick,
-  closeOrderModal
+  closeOrderModal,
 }) => (
   <section className={styles.burger_constructor}>
     {constructorItems.bun ? (
@@ -30,30 +26,22 @@ export const BurgerConstructorUI: FC<BurgerConstructorUIProps> = ({
         />
       </div>
     ) : (
-      <div
-        className={`${styles.noBuns} ${styles.noBunsTop} ml-8 mb-4 mr-5 text text_type_main-default`}
-      >
+      <div className={`${styles.noBuns} ${styles.noBunsTop} ml-8 mb-4 mr-5 text text_type_main-default`}>
         Выберите булки
       </div>
     )}
     <ul className={styles.elements}>
       {constructorItems.ingredients.length > 0 ? (
-        constructorItems.ingredients.map(
-          (item: TConstructorIngredient, index: number) => (
-            <BurgerConstructorElement
-              ingredient={item}
-              index={index}
-              totalItems={constructorItems.ingredients.length}
-              key={item.id}
-            />
-          )
-        )
+        constructorItems.ingredients.map((item: TConstructorIngredient, index: number) => (
+          <BurgerConstructorElement
+            ingredient={item}
+            index={index}
+            totalItems={constructorItems.ingredients.length}
+            key={item.id}
+          />
+        ))
       ) : (
-        <div
-          className={`${styles.noBuns} ml-8 mb-4 mr-5 text text_type_main-default`}
-        >
-          Выберите начинку
-        </div>
+        <div className={`${styles.noBuns} ml-8 mb-4 mr-5 text text_type_main-default`}>Выберите начинку</div>
       )}
     </ul>
     {constructorItems.bun ? (
@@ -67,9 +55,7 @@ export const BurgerConstructorUI: FC<BurgerConstructorUIProps> = ({
         />
       </div>
     ) : (
-      <div
-        className={`${styles.noBuns} ${styles.noBunsBottom} ml-8 mb-4 mr-5 text text_type_main-default`}
-      >
+      <div className={`${styles.noBuns} ${styles.noBunsBottom} ml-8 mb-4 mr-5 text text_type_main-default`}>
         Выберите булки
       </div>
     )}
@@ -78,13 +64,7 @@ export const BurgerConstructorUI: FC<BurgerConstructorUIProps> = ({
         <p className={`text ${styles.text} mr-2`}>{price}</p>
         <CurrencyIcon type='primary' />
       </div>
-      <Button
-        htmlType='button'
-        type='primary'
-        size='large'
-        children='Оформить заказ'
-        onClick={onOrderClick}
-      />
+      <Button htmlType='button' type='primary' size='large' children='Оформить заказ' onClick={onOrderClick} />
     </div>
 
     {orderRequest && (
@@ -94,10 +74,7 @@ export const BurgerConstructorUI: FC<BurgerConstructorUIProps> = ({
     )}
 
     {orderModalData && (
-      <Modal
-        onClose={closeOrderModal}
-        title={orderRequest ? 'Оформляем заказ...' : ''}
-      >
+      <Modal onClose={closeOrderModal} title={orderRequest ? 'Оформляем заказ...' : ''}>
         <OrderDetailsUI orderNumber={orderModalData.number} />
       </Modal>
     )}

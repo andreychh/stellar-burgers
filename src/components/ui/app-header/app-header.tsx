@@ -1,12 +1,7 @@
 import React, { FC } from 'react';
 import styles from './app-header.module.css';
 import { TAppHeaderUIProps } from './type';
-import {
-  BurgerIcon,
-  ListIcon,
-  Logo,
-  ProfileIcon
-} from '@zlden/react-developer-burger-ui-components';
+import { BurgerIcon, ListIcon, Logo, ProfileIcon } from '@zlden/react-developer-burger-ui-components';
 
 export const AppHeaderUI: FC<TAppHeaderUIProps> = ({ userName }) => (
   <header className={styles.header}>
@@ -26,9 +21,7 @@ export const AppHeaderUI: FC<TAppHeaderUIProps> = ({ userName }) => (
       </div>
       <div className={styles.link_position_last}>
         <ProfileIcon type={'primary'} />
-        <p className='text text_type_main-default ml-2'>
-          {userName || 'Личный кабинет'}
-        </p>
+        <p className='text text_type_main-default ml-2'>{userName || 'Личный кабинет'}</p>
       </div>
     </nav>
   </header>
