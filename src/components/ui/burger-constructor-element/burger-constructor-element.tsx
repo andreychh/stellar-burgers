@@ -14,7 +14,10 @@ export const BurgerConstructorElementUI: FC<BurgerConstructorElementUIProps> = m
         isDownDisabled={index === totalItems - 1}
         isUpDisabled={index === 0}
       />
-      <div className={`${styles.element_fullwidth} ml-2`}>
+      <div
+        className={`${styles.element_fullwidth} ml-2`}
+        data-cy={`constructor-ingredient-${ingredient._id}`}
+      >
         <ConstructorElement
           handleClose={handleClose}
           price={ingredient.price}

@@ -3,3 +3,4 @@ storybook-static
 .env
 .idea
 dist
+coverage
