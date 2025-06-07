@@ -20,7 +20,7 @@ export const BurgerConstructorUI: FC<BurgerConstructorUIProps> = ({
     {constructorItems.bun ? (
       <div
         className={`${styles.element} mb-4 mr-4`}
-        data-cy='constuctor-bun-up'
+        data-cy='constructor-bun-up'
       >
         <ConstructorElement
           isLocked
@@ -31,7 +31,10 @@ export const BurgerConstructorUI: FC<BurgerConstructorUIProps> = ({
         />
       </div>
     ) : (
-      <div className={`${styles.noBuns} ${styles.noBunsTop} ml-8 mb-4 mr-5 text text_type_main-default`}>
+      <div
+        className={`${styles.noBuns} ${styles.noBunsTop} ml-8 mb-4 mr-5 text text_type_main-default`}
+        data-cy='constructor-bun-up'
+      >
         Выберите булки
       </div>
     )}
@@ -46,13 +49,18 @@ export const BurgerConstructorUI: FC<BurgerConstructorUIProps> = ({
           />
         ))
       ) : (
-        <div className={`${styles.noBuns} ml-8 mb-4 mr-5 text text_type_main-default`}>Выберите начинку</div>
+        <div
+          className={`${styles.noBuns} ml-8 mb-4 mr-5 text text_type_main-default`}
+          data-cy='constructor-empty'
+        >
+          Выберите начинку
+        </div>
       )}
     </ul>
     {constructorItems.bun ? (
       <div
         className={`${styles.element} mt-4 mr-4`}
-        data-cy='constuctor-bun-down'
+        data-cy='constructor-bun-down'
       >
         <ConstructorElement
           isLocked
@@ -63,7 +71,10 @@ export const BurgerConstructorUI: FC<BurgerConstructorUIProps> = ({
         />
       </div>
     ) : (
-      <div className={`${styles.noBuns} ${styles.noBunsBottom} ml-8 mb-4 mr-5 text text_type_main-default`}>
+      <div
+        className={`${styles.noBuns} ${styles.noBunsBottom} ml-8 mb-4 mr-5 text text_type_main-default`}
+        data-cy='constructor-bun-down'
+      >
         Выберите булки
       </div>
     )}
@@ -74,6 +85,7 @@ export const BurgerConstructorUI: FC<BurgerConstructorUIProps> = ({
       </div>
       <Button
         children='Оформить заказ'
+        data-cy='order-button'
         htmlType='button'
         size='large'
         type='primary'
