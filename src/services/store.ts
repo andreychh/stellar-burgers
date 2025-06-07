@@ -2,7 +2,7 @@ import { TypedUseSelectorHook, useDispatch as dispatchHook, useSelector as selec
 import { combineSlices, configureStore } from '@reduxjs/toolkit';
 import { constructorSlice, feedsSlice, ingredientsSlice, ordersSlice, userSlice } from '@slices';
 
-const rootReducer = combineSlices(ingredientsSlice, constructorSlice, feedsSlice, userSlice, ordersSlice);
+export const rootReducer = combineSlices(ingredientsSlice, constructorSlice, feedsSlice, userSlice, ordersSlice);
 
 const store = configureStore({
   reducer: rootReducer,
