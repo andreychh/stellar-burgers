@@ -1,0 +1,171 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "prettier",
+    "import",
+    "simple-import-sort"
+  ],
+  "extends": [
+    "prettier"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "prettier/prettier": [
+      "warn",
+      {
+        "usePrettierrc": true
+      }
+    ],
+    "react/react-in-jsx-scope": "off",
+    "comma-dangle": "off",
+    "use-isnan": [
+      "error",
+      {
+        "enforceForSwitchCase": true
+      }
+    ],
+    "import/no-namespace": "error",
+    "react/void-dom-elements-no-children": "warn",
+    "react/no-unsafe": "warn",
+    "react/no-unused-state": "warn",
+    "react/prefer-stateless-function": "warn",
+    "react/self-closing-comp": "warn",
+    "react/no-will-update-set-state": "warn",
+    "react/no-this-in-sfc": "warn",
+    "react/no-string-refs": "warn",
+    "react/no-redundant-should-component-update": "warn",
+    "react/jsx-boolean-value": [
+      "warn",
+      "never"
+    ],
+    "react/jsx-key": "warn",
+    "react/jsx-max-props-per-line": [
+      "warn",
+      {
+        "maximum": 1,
+        "when": "multiline"
+      }
+    ],
+    "react/jsx-max-depth": [
+      "warn",
+      {
+        "max": 8
+      }
+    ],
+    "arrow-body-style": [
+      "warn",
+      "as-needed"
+    ],
+    "dot-notation": "warn",
+    "jsx-quotes": [
+      "warn",
+      "prefer-single"
+    ],
+    "valid-typeof": "warn",
+    "@typescript-eslint/member-ordering": [
+      "warn",
+      {
+        "default": [
+          "private-static-field",
+          "protected-static-field",
+          "public-static-field",
+          "private-static-method",
+          "protected-static-method",
+          "public-static-method",
+          "private-constructor",
+          "protected-constructor",
+          "public-constructor",
+          "private-instance-field",
+          "protected-instance-field",
+          "public-instance-field",
+          "private-instance-method",
+          "protected-instance-method",
+          "public-instance-method"
+        ]
+      }
+    ],
+    "import/order": "off",
+    "import/newline-after-import": "warn",
+    "import/no-named-default": "off",
+    "import/no-duplicates": "warn",
+    "simple-import-sort/imports": [
+      "warn",
+      {
+        "groups": [
+          // CSS-модули
+          [
+            "^.+\\.css$"
+          ],
+          // Пустая строка после CSS
+          [
+            "^\\u0000"
+          ],
+          // Внешние библиотеки (React, Redux и другие)
+          [
+            "^react",
+            "^redux",
+            "^@",
+            "^[a-zA-Z]"
+          ],
+          // Абсолютные импорты проекта (все папки сразу)
+          [
+            "^(components|containers|pages|store|services|api|utils|hooks|constants|types)(/.*|$)"
+          ],
+          // Относительные импорты
+          [
+            "^\\."
+          ]
+        ]
+      }
+    ],
+    "react/jsx-sort-props": [
+      "warn",
+      {
+        "callbacksLast": true,
+        "shorthandFirst": true,
+        "ignoreCase": true,
+        "noSortAlphabetically": false,
+        "reservedFirst": [
+          "key",
+          "ref",
+          "dangerouslySetInnerHTML"
+        ],
+        "multiline": "last"
+      }
+    ],
+    "react/jsx-curly-brace-presence": [
+      "warn",
+      {
+        "props": "never",
+        "children": "never"
+      }
+    ],
+    "react/jsx-closing-bracket-location": [
+      "warn",
+      "line-aligned"
+    ]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    }
+  }
+}
